@@ -12,7 +12,7 @@ import sys
 
 # My library
 sys.path.append('../src/')
-import mnist_loader
+import test1
 
 # Third-party libraries
 import numpy as np
@@ -22,7 +22,7 @@ import numpy as np
 NTD = 1000
 NVD = 100
 
-training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
+training_data, validation_data, test_data = test1.load_data_wrapper()
 
 def make_data_integer(td):
     # This will be slow, due to the loop.  It'd be better if numpy did

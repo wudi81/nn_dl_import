@@ -16,7 +16,7 @@ import sys
 
 # My library
 sys.path.append('../src/')
-import mnist_loader
+import test1
 import network2
 
 # Third-party libraries
@@ -36,7 +36,7 @@ def run_network(filename, n, eta):
     # Make results more easily reproducible
     random.seed(12345678)
     np.random.seed(12345678)
-    training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
+    training_data, validation_data, test_data = test1.load_data_wrapper()
     net = network2.Network([784, n, 10], cost=network2.CrossEntropyCost)
     print "Train the network using the default starting weights."
     default_vc, default_va, default_tc, default_ta \

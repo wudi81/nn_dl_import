@@ -22,10 +22,10 @@ from naive ideas."""
 from collections import defaultdict
 
 # My libraries
-import mnist_loader
+import test1
 
 def main():
-    training_data, validation_data, test_data = mnist_loader.load_data()
+    training_data, validation_data, test_data = test1.load_data()
     # training phase: compute the average darknesses for each digit,
     # based on the training data
     avgs = avg_darknesses(training_data)
@@ -33,8 +33,8 @@ def main():
     # correctly
     num_correct = sum(int(guess_digit(image, avgs) == digit)
                       for image, digit in zip(test_data[0], test_data[1]))
-    print "Baseline classifier using average darkness of image."
-    print "%s of %s values correct." % (num_correct, len(test_data[1]))
+    print("Baseline classifier using average darkness of image.")
+    print("%s of %s values correct." % (num_correct, len(test_data[1])))
 
 def avg_darknesses(training_data):
     """ Return a defaultdict whose keys are the digits 0 through 9.

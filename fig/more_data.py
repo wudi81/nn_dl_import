@@ -13,7 +13,7 @@ import sys
 
 # My library
 sys.path.append('../src/')
-import mnist_loader
+import test1
 import network2
 
 # Third-party libraries
@@ -33,7 +33,7 @@ def run_networks():
     # Make results more easily reproducible
     random.seed(12345678)
     np.random.seed(12345678)
-    training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
+    training_data, validation_data, test_data = test1.load_data_wrapper()
     net = network2.Network([784, 30, 10], cost=network2.CrossEntropyCost())
     accuracies = []
     for size in SIZES:
@@ -50,7 +50,7 @@ def run_networks():
 
 def run_svms():
     svm_training_data, svm_validation_data, svm_test_data \
-        = mnist_loader.load_data()
+        = test1.load_data()
     accuracies = []
     for size in SIZES:
         print "\n\nTraining SVM with data set size %s" % size

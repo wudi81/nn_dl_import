@@ -17,7 +17,7 @@ import sys
 sys.path.append("../src/")
 
 # My library
-import mnist_loader
+import test1
 import network2
 
 # Third-party libraries
@@ -26,7 +26,7 @@ import numpy as np
 
 def main():
     # Load the data
-    full_td, _, _ = mnist_loader.load_data_wrapper()
+    full_td, _, _ = test1.load_data_wrapper()
     td = full_td[:1000] # Just use the first 1000 items of training data
     epochs = 500 # Number of epochs to train for
 

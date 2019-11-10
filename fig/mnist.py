@@ -11,7 +11,7 @@ import sys
 
 # My library
 sys.path.append('../src/')
-import mnist_loader
+import test1
 
 # Third-party libraries
 import matplotlib
@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def main():
-    training_set, validation_set, test_set = mnist_loader.load_data()
+    training_set, validation_set, test_set = test1.load_data()
     images = get_images(training_set)
     plot_rotated_image(images[0])
 

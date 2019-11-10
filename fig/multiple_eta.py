@@ -14,7 +14,7 @@ import sys
 
 # My library
 sys.path.append('../src/')
-import mnist_loader
+import test1
 import network2
 
 # Third-party libraries
@@ -39,7 +39,7 @@ def run_networks():
     # Make results more easily reproducible
     random.seed(12345678)
     np.random.seed(12345678)
-    training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
+    training_data, validation_data, test_data = test1.load_data_wrapper()
     results = []
     for eta in LEARNING_RATES:
         print "\nTrain a network using eta = "+str(eta)

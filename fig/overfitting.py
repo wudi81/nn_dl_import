@@ -12,7 +12,7 @@ import sys
 
 # My library
 sys.path.append('../src/')
-import mnist_loader
+import test1
 import network2
 
 # Third-party libraries
@@ -52,7 +52,7 @@ def run_network(filename, num_epochs, training_set_size=1000, lmbda=0.0):
     # Make results more easily reproducible
     random.seed(12345678)
     np.random.seed(12345678)
-    training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
+    training_data, validation_data, test_data = test1.load_data_wrapper()
     net = network2.Network([784, 30, 10], cost=network2.CrossEntropyCost())
     net.large_weight_initializer()
     test_cost, test_accuracy, training_cost, training_accuracy \

@@ -7,13 +7,13 @@ data set, using an SVM classifier."""
 
 #### Libraries
 # My libraries
-import mnist_loader 
+import test1
 
 # Third-party libraries
 from sklearn import svm
 
 def svm_baseline():
-    training_data, validation_data, test_data = mnist_loader.load_data()
+    training_data, validation_data, test_data = test1.load_data()
     # train
     clf = svm.SVC()
     clf.fit(training_data[0], training_data[1])
